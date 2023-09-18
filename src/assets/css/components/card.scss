@@ -1,0 +1,12 @@
+
+
+.movie-card {
+    padding: 20px;
+    background-color: lavender;
+    display: inline-block;
+    &-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+}

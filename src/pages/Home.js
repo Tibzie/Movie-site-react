@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+import MovieCard from "../components/movieCard";
 
 const Home = () => {
     return(
-        <>
-            Home
-        </>
+        <div class="movie-card-wrapper">
+            <MovieCard title="Spiderman" genre="Action" description="A superhero movie" date="2023" />
+        </div>
     )
 }
 
