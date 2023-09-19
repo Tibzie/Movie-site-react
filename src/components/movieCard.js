@@ -1,12 +1,12 @@
 import React from "react";
 
-const MovieCard = (props) => {
+const MovieCard = ({movieData}) => {
     return (
         <div className="movie-card">
-            <h2>{props.title}</h2>
-            <p>{props.genre}</p>
-            <p>{props.description}</p>
-            <p>{props.date}</p>
+            <h2>{movieData.Title}</h2>
+            <p>{movieData.Genre}</p>
+            <p>{movieData.Description}</p>
+            <p>{movieData.Date}</p>
         </div>
 
     )
