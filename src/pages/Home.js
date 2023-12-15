@@ -21,7 +21,7 @@ const Home = () => {
     }, []);
 
     return(
-        <div class="movie-card-wrapper">
+        <div className="movie-card-wrapper">
             {/* <MovieCard title="Spiderman" genre="Action" description="A superhero movie" date="2023" /> */}
             {/* <MovieCard title={movie1.Title} genre={movie1.Year}/> */}
             {movieData && <MovieCard movieData={movieData} />} 
