@@ -24,6 +24,16 @@ a {
   align-items: center;
   padding: 20px 30px;
 }
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+.navbar-logo span {
+  margin-left: 10px;
+}
+.navbar-logo:hover span {
+  color: #CFC49F;
+}
 
 .navbar-list {
   list-style-type: none;
