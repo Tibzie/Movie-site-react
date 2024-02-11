@@ -1,0 +1,43 @@
+.movie-card {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 300px;
+    &__header {
+        padding: 10px;
+        background-color: #564E58;
+        color: #DEDDDB;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            &::before {
+                content: "";
+                display: inline-flex;
+                width: 5px;
+                height: 5px;
+                background-color: #BFB48F;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+        }
+    }
+    &__thumbnail {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    &-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 30px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 30px 40px;
+    }
+}

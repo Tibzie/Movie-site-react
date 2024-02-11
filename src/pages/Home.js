@@ -1,30 +1,41 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import MovieCard from "../components/movieCard";
+import MovieList from "../components/MovieList";
+import MovieListHeading from "../components/MovieListHeading";
+import SearchBox from "../components/SearchBox";
 
 const API_KEY = "2a2ac055";
 
 const Home = () => {
 
-    const [movieData, setMovies] = useState([]);
+    const [movies, setMovies] = useState([]);
+    const [searchValue, setSearchValue] = useState('');
+
+    const getMovieRequest = async (searchValue) => {
+        const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=${API_KEY}`;
+
+        const response = await fetch(url);
+        const responseJson = await response.json();
+
+        if(responseJson.Search) {
+            setMovies(responseJson.Search);
+        }
+    };
 
     useEffect(() => {
-        const movieTitle = "Avatar";
+        getMovieRequest(searchValue);
+    }, [searchValue]);
 
-        axios.get(`http://www.omdbapi.com/?t=${movieTitle}&apikey=${API_KEY}`)
-            .then(response => {
-                setMovies(response.data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error)
-            });
-    }, []);
-
-    return(
-        <div className="movie-card-wrapper">
-            {/* <MovieCard title="Spiderman" genre="Action" description="A superhero movie" date="2023" /> */}
-            {/* <MovieCard title={movie1.Title} genre={movie1.Year}/> */}
-            {movieData && <MovieCard movieData={movieData} />} 
+    return (
+        <div className="">
+            <div className="movie-header-wrapper">
+                <MovieListHeading heading="Movies" />
+                <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+            </div>
+            <div className="movie-card-wrapper">
+                
+                {/* {movieData && <MovieCard movieData={movieData} />}  */}
+                <MovieList movies={movies} />
+            </div>
         </div>
     )
 }
