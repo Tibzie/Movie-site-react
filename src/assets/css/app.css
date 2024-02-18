@@ -39,6 +39,18 @@ a {
   max-width: 100%;
 }
 
+.movie-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movie-wrapper h1 {
+  margin-bottom: 20px;
+}
+
 .navbar {
   background-color: #564E58;
   display: flex;
@@ -99,6 +111,7 @@ a {
   margin-right: 5px;
 }
 .movie-card__thumbnail {
+  display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 1/1;
@@ -111,4 +124,25 @@ a {
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 30px 40px;
+}
+
+.movie-favourites {
+  background-color: #252627;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie-favourites__text {
+  display: block;
+  color: #DEDDDB;
+}
+.movie-favourites__icon {
+  display: block;
+  cursor: pointer;
+  color: #DEDDDB;
+  font-size: 24px;
+}
+.movie-favourites__icon:hover {
+  color: #b6545d;
 }/*# sourceMappingURL=app.css.map */

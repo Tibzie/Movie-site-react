@@ -27,6 +27,7 @@
         }
     }
     &__thumbnail {
+        display: block;
         width: 100%;
         height: auto;
         aspect-ratio: 1/1;
@@ -39,5 +40,26 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
         gap: 30px 40px;
+    }
+}
+
+.movie-favourites {
+    background-color: $eerie-black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__text {
+        display: block;
+        color: #DEDDDB;
+    }
+    &__icon {
+        display: block;
+        cursor: pointer;
+        color: #DEDDDB;
+        font-size: 24px;
+        &:hover {
+            color: $cordovan;
+        }
     }
 }
